@@ -35,6 +35,6 @@ x{
 ## Links
 
 DynamX website: https://dynamx.fr  
-Addon download: https://dynamx.fr/addons
-DynamX wiki: https://dynamx.fr/wiki/
+Addon download: https://dynamx.fr/addons  
+DynamX wiki: https://dynamx.fr/wiki/  
 Discord: https://discord.gg/y53KGzD 
