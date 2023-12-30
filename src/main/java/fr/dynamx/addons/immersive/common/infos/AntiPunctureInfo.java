@@ -8,7 +8,7 @@ import fr.dynamx.api.contentpack.registry.RegisteredSubInfoType;
 import fr.dynamx.api.contentpack.registry.SubInfoTypeRegistries;
 
 @RegisteredSubInfoType(
-        name = "HerseAddon",
+        name = "HarrowAddon",
         registries = {SubInfoTypeRegistries.WHEELS},
         strictName = false
 )

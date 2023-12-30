@@ -13,13 +13,13 @@ import fr.dynamx.common.entities.PackPhysicsEntity;
 import fr.dynamx.common.entities.PropsEntity;
 
 @RegisteredSubInfoType(
-        name = "HerseAddon",
+        name = "HarrowAddon",
         registries = {SubInfoTypeRegistries.PROPS},
         strictName = false
 )
 public class HerseInfo<T extends PropObject<T>> extends SubInfoType<T> {
 
-    @PackFileProperty(configNames = {"IsHerse"}, type = DefinitionType.DynamXDefinitionTypes.BOOL)
+    @PackFileProperty(configNames = {"IsHarrow"}, type = DefinitionType.DynamXDefinitionTypes.BOOL)
     public boolean isHerse;
 
     public HerseInfo(ISubInfoTypeOwner<T> owner) {
