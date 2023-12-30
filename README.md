@@ -4,8 +4,8 @@
 
 This addon adds new features to DynamX :
 
-- x
-- x
+- Harrow
+- Anti puncture
 - x
 - x
 
@@ -14,19 +14,24 @@ This addon adds new features to DynamX :
 To use modules ingame you have to add specific code blocks.
 Here are some examples:
 
-#### X
+#### Harrow
 
+To add this module to your prop, you need to edit the prop file inside your DynamX pack. This file have a name like block_NAME.
 ```
-x{
-
+prop_NAME{
+  #...
+  HarrowAddon{
+    IsHarrow: true
+  }
 }
 ```
 
-#### X
+#### Anti puncture
 
+To add this module to your wheel, you need to edit the wheel file inside your DynamX pack. This file have a name like wheel_NAME.
 ```
-x{
-  
+HarrowAddon{
+    CanFlattened: false
 }
 ```
 
