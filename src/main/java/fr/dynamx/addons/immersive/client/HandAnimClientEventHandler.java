@@ -8,12 +8,14 @@ import fr.dynamx.common.entities.BaseVehicleEntity;
 import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 
 @Mod.EventBusSubscriber(modid = ImmersiveAddon.ID, value = Side.CLIENT)
 public class HandAnimClientEventHandler {
 
-    public void onUpdate(ModelPlayerEvent.SetupAngles.Post event){
+    @SubscribeEvent
+    public void onSetupAngles(ModelPlayerEvent.SetupAngles.Post event){
         setModel(event.getEntityPlayer(), event.getModelPlayer());
     }
 
