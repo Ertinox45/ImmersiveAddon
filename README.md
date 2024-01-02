@@ -6,7 +6,7 @@ This addon adds new features to DynamX :
 
 - Harrow
 - Anti puncture
-- x
+- Hands on the steering wheel
 - x
 
 ### How to add modules:

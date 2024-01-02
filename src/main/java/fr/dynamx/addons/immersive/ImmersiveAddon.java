@@ -1,7 +1,11 @@
 package fr.dynamx.addons.immersive;
 
+import fr.dynamx.addons.immersive.client.HandAnimClientEventHandler;
+import fr.dynamx.addons.immersive.common.HandAnimationEventHandler;
+import fr.dynamx.addons.immersive.utils.ModSyncedDataKeys;
+import fr.dynamx.addons.immersive.utils.Utils;
 import fr.dynamx.api.contentpack.DynamXAddon;
-import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
@@ -16,18 +20,16 @@ public class ImmersiveAddon {
 
     @DynamXAddon.AddonEventSubscriber
     public static void initAddon() {
-        if (FMLCommonHandler.instance().getSide().isClient()) {
-            //...
-        }
+        //if (FMLCommonHandler.instance().getSide().isClient()) {}
     }
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        //MinecraftForge.EVENT_BUS.register(new Common());
-        if (event.getSide().isClient()){
-        //    MinecraftForge.EVENT_BUS.register(new Client());
+        ModSyncedDataKeys.initKeys();
+        MinecraftForge.EVENT_BUS.register(new HandAnimationEventHandler());
+        if (event.getSide().isClient()) {
+            MinecraftForge.EVENT_BUS.register(new HandAnimClientEventHandler());
         }
-
         //network = NetworkRegistry.INSTANCE.newSimpleChannel(ImmersiveAddon.ID);
         //network.registerMessage(PacketAttachTrailer.Handler.class, PacketAttachTrailer.class, 0, Side.SERVER);
     }
