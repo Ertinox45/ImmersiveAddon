@@ -1,6 +1,7 @@
-/run/
+run/*
+
+#!/run/config/
+
 .gradle
 .idea
 /build/
-!/run/config/dynamx_immersive.cfg
-!/run/config/radiofrequencies.json

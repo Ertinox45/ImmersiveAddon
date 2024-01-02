@@ -1,0 +1,22 @@
+[
+  {
+    "frequency": 50,
+    "name": "Funradio - France",
+    "url": "http://icecast.funradio.fr/fun-1-44-128"
+  },
+  {
+    "frequency": 60,
+    "name": "RTL2 - France",
+    "url": "http://icecast.rtl2.fr/rtl2-1-44-64"
+  },
+  {
+    "frequency": 70,
+    "name": "BBC - Uk",
+    "url": "http://stream.live.vc.bbcmedia.co.uk/bbc_radio_one"
+  },
+  {
+    "frequency": 82,
+    "name": "Disco",
+    "url": "http://sc-disco.1.fm:8100/"
+  }
+]
