@@ -43,3 +43,10 @@ DynamX website: https://dynamx.fr
 Addon download: https://dynamx.fr/addons  
 DynamX wiki: https://dynamx.fr/wiki/  
 Discord: https://discord.gg/y53KGzD 
+
+## Authors
+
+* **DynamX** - *Initial work* - [DynamX](https://dynamx.fr)
+* **Ertinox45** - *Project initiator* - [Ertinox45](https://github.com/Ertinox45)
+* **Gabidut76** - *Developer* - [Gabidut76](https://github.com/gabidut)
+* **BlackNite** - *Thanks for the radio* - [BlackNite](https://github.com/BlackNiteHD)
