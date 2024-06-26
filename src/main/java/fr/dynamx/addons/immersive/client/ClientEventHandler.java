@@ -30,6 +30,25 @@ public class ClientEventHandler {
     private static long lastJump = 0;
 
     @SubscribeEvent
+    public void updateVehicleController(VehicleEntityEvent.ControllerUpdate event) {
+        if(event.getEntity().hasModuleOfType(DamageModule.class)) {
+            DamageModule module = event.getEntity().getModuleByType(DamageModule.class);
+
+            if (event.getController() instanceof HelicopterController) {
+                float percentDamage = 100 - module.getDamage();
+                if (percentDamage < 5) {
+                    ((CarController) event.getController()).setEngineStarted(false);
+                }
+            } else if (event.getController() instanceof CarController){
+                float percentDamage = 100 - module.getDamage();
+                if (percentDamage <= 15) {
+                    ((CarController) event.getController()).setEngineStarted(false);
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent
     @SideOnly(Side.CLIENT)
     public void blockOutlineEvent(DrawBlockHighlightEvent event) {
         if (!event.getPlayer().capabilities.isCreativeMode && !ImmersiveAddonConfig.enableBlockOutline) {
