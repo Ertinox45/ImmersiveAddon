@@ -16,7 +16,7 @@ import java.util.List;
 @SynchronizedEntityVariable.SynchronizedPhysicsModule(modid = ImmersiveAddon.ID)
 public class DamageCarModule implements IPhysicsModule<AbstractEntityPhysicsHandler<?, ?>>, IPhysicsModule.IEntityUpdateListener {
 
-    public static enum CarDamageType {
+    public enum CarDamageType {
         WHEELS(1),
         ENGINE(2),
         CHASSIS(4),
@@ -104,13 +104,4 @@ public class DamageCarModule implements IPhysicsModule<AbstractEntityPhysicsHand
         damagestypes.set(tag.getInteger("damagestypes"));
     }
 
-
-    @Override
-    public void updateEntity() {
-        if (entity instanceof CarEntity) {
-            CarEntity<?> carEntity = (CarEntity<?>) entity;
-            CarEngineModule module = carEntity.getModuleByType(CarEngineModule.class);
-
-        }
-    }
 }
