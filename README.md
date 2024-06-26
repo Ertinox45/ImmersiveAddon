@@ -35,7 +35,14 @@ HarrowAddon{
 }
 ```
 
-....
+#### TowTruck
+
+To add this module to your tow truck, you need to edit the car file inside your DynamX pack. This file have a name like vehicle_NAME.
+```
+TowTruckInfo{
+    VehicleAttachPoint: 0 0 0
+}
+```
 
 ## Links
 
